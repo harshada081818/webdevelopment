@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <style>
+        html,
+        body {
+            font-family: 'Raleway', sans-serif;
+        }
+
+        /* ========================================--------------------TOP=========== */
+
+        #myBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 40px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: green;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50px;
+        }
+
+        #myBtn:hover {
+            background-color: #555;
+        }
+
+        /* =========================== -----------------------------------NAV ========================= */
+        .top-right {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+        }
+
+        .navbar-brand {
+            font-size: xx-large;
+            font-weight: bolder;
+            margin-left: 5%;
+        }
+
+        .nav-item.right {
+            margin-left: auto;
+        }
+
+        .nav-item {
+            margin-left: auto;
+            font-size: larger;
+            font-weight: bolder;
+            color: #000000;
+        }
+
+        .contact {
+            border-radius: 50%;
+        }
+
+        .navbar-nav {
+    margin-right: 5%; 
+}
+
+        /* ===================================--------------------!st DIv-------------------======================== */
+        .clearfix {
+            position: relative;
+            background-color: #eff4f400;
+        }
+
+        .clearfix::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(./img/bgg1.png);
+            background-repeat: repeat-x;
+            background-size: cover;
+            opacity: 0.5;
+            z-index: -1;
+        }
+
+        .green-text {
+            color: green;
+        }
+
+        .blue-text {
+            color: rgb(26, 23, 95);
+        }
+
+
+
+        /* =============================----------------------------Websites-------------------===============*/
+        .fb {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            /* text-decoration: none; */
+        }
+
+        .avatar2 a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: bolder;
+            font-size: larger;
+        }
+
+        
+        @media (max-width: 992px) {
+            .navbar .container-fluid {
+                margin-left: 0;
+                
+                margin-right: 0;
+            }
+
+            .d-flex {
+                flex-direction: column;
+               
+            }
+
+            .col-6 {
+                width: 100%;
+              
+            }
+
+            .oss {
+                text-align: center;
+               
+            }
+
+            .avatar2 .col {
+                text-align: center;
+              
+            }
+        }
+
+        @media (max-width: 576px) {
+            .navbar-brand {
+                font-size: large;
+              
+            }
+
+            .nav-item {
+                font-size: medium;
+               
+            }
+
+            .avatar2 a {
+                font-size: medium;
+                
+            }
+
+            .fb {
+                width: 40px;
+              
+                height: 40px;
+            }
+        }
+
+        /* ----------------------------------------------------------------About Us------------- */
+        .how-section1 {
+            margin-top: 6%;
+            padding: 1%;
+            padding-left: 5%;
+            background-color: beige;
+            background-image: url(./img/bg2.png);
+            background-repeat: repeat-x;
+
+
+        }
+
+        .how-section1 h4 {
+            color: #ffa500;
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+        .how-section1 .subheading {
+            color: #3931af;
+            font-size: 20px;
+        }
+
+        .how-section1 .row {
+            margin-top: 10%;
+        }
+
+        .how-img {
+            text-align: center;
+        }
+
+        .how-img img {
+            width: 60%;
+            border-top-left-radius: 55px 70px;
+            border-bottom-left-radius: 55px 70px;
+            border-bottom-right-radius: 55px 70px;
+            height: 100%;
+        }
+
+
+        /* ===========================-------------------------services-----------------------========= */
+
+        .services {
+            background-image: url(./img/bgg1.png);
+            background-repeat: repeat-x;
+        }
+
+        .sc {
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            margin-left: 20px; /* Add left margin */
+            margin-top: 20px; /* Add top margin */
+        }
+
+        .os {
+            margin-left: 5%;
+            padding: 5%;
+            background-color: rgba(169, 169, 169, 0.33);
+            border-top-right-radius: 55px 70px;
+            border-bottom-left-radius: 55px 70px;
+            border-bottom-right-radius: 55px 70px;
+        }
+
+        .oss {
+            margin-left: 1%;
+            padding: 5%;
+            background-color: rgb(169 169 169 / 6%);
+            border-top-right-radius: 55px 70px;
+            border-bottom-left-radius: 55px 70px;
+            border-bottom-right-radius: 55px 70px;
+        }
+
+        .sc i {
+            padding: 1%;
+            margin: 1%;
+            font-size: 75px;
+            transition: 0.5s;
+            color: green;
+        }
+
+        .hover13 i:hover {
+            opacity: 1;
+            -webkit-animation: flash 1.5s;
+            animation: flash 1.5s;
+        }
+
+        @-webkit-keyframes flash {
+            0% {
+                opacity: .4;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes flash {
+            0% {
+                opacity: .4;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .move-up:hover {
+            background-color: rgba(162, 197, 154, 0.623);
+            transition: all .5s;
+            transform: translateY(-20px);
+        }
+
+
+        /* Media Queries for Responsive Design */
+        @media (max-width: 992px) {
+            .services .col-4 {
+                margin: 0 auto 5%;
+                /* Center align and add margin for smaller screens */
+            }
+
+            .os {
+                text-align: center;
+                /* Center align text on smaller screens */
+                
+            }
+        }
+
+        @media (max-width: 576px) {
+            .sc i {
+                font-size: 50px;
+               
+            }
+
+            .os h1 {
+                font-size: 1.5rem;
+                
+            }
+
+            .os h2 {
+                font-size: 1.25rem;
+              
+            }
+
+            .os p {
+                font-size: 1rem;
+               
+            }
+        }
+
+        /*--------------------------------------- Why Choose Us------------------- */
+        .why_choose {
+            width: 100%;
+            background-image: url(./img/bg2.png);
+            background-repeat: repeat-x;
+        }
+
+        .why_choose_head {
+            width: 100%;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .why_choose_head h1 {
+            width: 100%;
+            color: #000000;
+            text-align: center;
+            font-size: 32px;
+        }
+
+        .why_choose_head h1 span {
+            border-bottom: 3px solid #497a4c;
+        }
+
+        .text-down {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .text-down img {
+            width: 100%;
+            height: 200px;
+        }
+
+        .text-down .textbox {
+            width: 100%;
+            height: 300px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: -255px;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            -ms-border-radius: 50px;
+            border-radius: 5px;
+            background-color: hsla(120, 41%, 45%, 0.38);
+            -webkit-transition: all 0.7s ease;
+            transition: all 0.7s ease;
+        }
+
+        .text-down:hover .textbox {
+            margin-top: 0;
+        }
+
+        .details {
+            width: 100%;
+            padding: 30px 30px 0;
+            text-align: center;
+            color: rgba(255, 255, 255, 1);
+            font-size: 25px;
+        }
+
+        .view-more {
+            width: 100%;
+            padding-top: 0;
+            text-align: center;
+            color: rgba(255, 255, 255, 1);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .text {
+            text-align: center;
+            padding-top: 70px;
+            color: rgba(255, 255, 255, 1);
+            font-size: 20px;
+        }
+
+        .top {
+            padding-top: 10px;
+        }
+
+        /* =========================--------------------------TEST--------------=============== */
+        .tst h1 span {
+            border-bottom: 3px solid #497a4c;
+        }
+
+        .test {
+            background-image: url(./img/bgg1.png);
+            background-repeat: repeat-x;
+        }
+
+        .testc {
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-bottom: 5%;
+        }
+
+        .avatar {
+            margin-top: 3%;
+        }
+
+        .testimonial-card {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            background-color: white;
+        }
+
+        .testimonial-card1 {
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            background-color: rgb(42, 123, 62);
+        }
+
+        .change-radius:hover {
+            background-color: rgb(42, 123, 62);
+            transition: all 1s;
+            border-radius: 20%;
+        }
+
+        .change-radius1:hover {
+            background-color: rgb(237, 245, 241);
+            transition: all 1s;
+            border-radius: 20%;
+        }
+
+        /* =========================nav============== */
+        #abc {
+            position: absolute;
+            width: 100%;
+            top: 0%;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="bi bi-caret-up-fill"
+            style="font-size: xx-large;"></i></button>
+
+    <!-- -------------------------------------------------------------------------------nav, intro, website in one div-------------------------------------- -->
+    <div class="clearfix">
+        <!-- -------------------------------------------------------------------------------------NAV BAR------------------------------- -->
+        <nav class="navbar navbar-expand-lg" id="abc">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Sample</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#ss">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#wc">Our Work</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#AB">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn btn-success contact" data-mdb-ripple-init><a
+                                    class="nav-link active" href="#footer">Contact</a>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- --------------------------------------------------------1st DIV intro--------------------------------------- -->
+
+        <div class="d-flex flex-column flex-lg-row"> 
+            <div class="col-12 col-lg-6 align-self-center">
+                
+                <div class="oss col-12">
+                    <h4>Best Agency in <span class="green-text">Asia</span></h4>
+                    <h1><span class="blue-text">Digital Agency</span></h1>
+                    <h2>& Solutions</h2>
+                    <p style="font-size:large;">Analay has 100 ambitious and dedicated employees all- inclusive digital
+                        expericence with a foucs
+                        on long term vision</p>
+                    <button type="button" class="btn btn-success btn-rounded btn-lg">Get Start <i
+                            class="bi bi-caret-right-square-fill"> </i> </button>
+                    <button type="button" class="btn btn-outline-success btn-lg">See Live Demo <i
+                            class="bi bi-caret-right-square-fill"></i></button>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6"> 
+                <img src="./img/abb.jpg" alt="..." class="img-fluid">
+                
+            </div>
+        </div>
+        <!-- -----------------------------------------------------websites ------------------------------ -->
+
+        <div class="container mt-4"> 
+            <div class="row">
+                <div class="col-12" style="box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;">
+                    <div class="row avatar2 p-2"> 
+                        <div class="col text-center"> 
+                            <a href="#"><img src="./img/algo.jpg" alt="Avatar" class="fb"> Algorithm</a>
+                        </div>
+                        <div class="col text-center">
+                            <a href="#"><img src="./img/fb.jpg" alt="Avatar" class="fb"> Facebook</a>
+                        </div>
+                        <div class="col text-center">
+                            <a href="#"><img src="./img/wm.png" alt="Avatar" class="fb"> World Map</a>
+                        </div>
+                        <div class="col text-center">
+                            <a href="#"><img src="./img/pin.png" alt="Avatar" class="fb"> Pinterest</a>
+                        </div>
+                        <div class="col text-center">
+                            <a href="#"><img src="./img/pin.png" alt="Avatar" class="fb"> Pinterest</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- -----------------------------------------------------------ABOUT US------------------------------------ -->
+
+    <div class="how-section1" id="AB">
+        <div class="row" style="margin-top: 5%;">
+            <div class="col-md-6">
+                <div class="oss col-6">
+                    <h4><span class="green-text">ABOUT US</span></h4>
+                    <h1><span class="blue-text">Boosts Your Business With Analay</span></h1>
+                    <p style="font-size:large;">Analay has 100 ambitious and dedicated employees all- inclusive digital
+                        expericence with a foucs
+                        on long term vision</p>
+                    <button type="button" class="btn btn-success btn-rounded btn-lg">More Details <i
+                            class="bi bi-caret-right-square-fill"> </i> </button>
+                </div>
+            </div>
+            <div class="col-md-6 how-img">
+                <img src="./img/abb.jpg" class="img-fluid squ" alt="" />
+            </div>
+        </div>
+    </div>
+
+    <!-- ----------------------------------------------------------------------Services----------------------------------------- -->
+
+    <div class="row services" id="ss">
+        <div class="col-12 col-lg-6" style="margin-bottom: 5%; margin-top: 5%;">
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col" style="margin-top: 5%;">
+                    <div class="card sc hover13  move-up">
+                        <i class="ri-macbook-line"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Web Development</h5>
+                            <p class="card-text">
+                                This is a longer card with supporting text below as a natural lead-in to
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="margin-top: 0;">
+                    <div class="card sc hover13 move-up">
+                        <i class="ri-android-line"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">UI/UX Designer</h5>
+                            <p class="card-text">
+                                This is a longer card with supporting text below as a natural lead-in to
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card sc hover13 move-up">
+                        <i class="ri-palette-line"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Graphic Designer</h5>
+                            <p class="card-text">This is a longer card with supporting text below </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col" style="margin-top: 0;">
+                    <div class="card sc hover13 move-up">
+                        <i class="ri-database-2-line"></i>
+                        <div class="card-body">
+                            <h5 class="card-title">Software Developer</h5>
+                            <p class="card-text">
+                                This is a longer card with supporting text below as a natural lead-in to
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-6 align-self-center">
+            <div class="os col-6">
+                <h4 style="color: green;">Services</h4>
+                <h1>Our Services</h1>
+                <h2>Include</h2>
+                <p>Analay has 100 ambitious and dedicated employees all- inclusive digital expericence with a foucs on
+                    long term vision</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- ------------------------------------------------------WHY CHOOSE US-------------------------------------- -->
+
+    <div class="why_choose" id="wc">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="why_choose_head">
+                        <h1>W<span>HY CHOOSE U</span>S?</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row" style="padding-bottom: 5%;">
+                <div class=" col-md-4 ">
+                    <div class="text-down">
+                        <img src="./img/wc1.jpg" alt="PN">
+                        <div class="textbox">
+                            <p class="details">High Quality Equipment
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" col-md-4 ">
+                    <div class="text-down">
+                        <img src="./img/wc1.jpg" alt="PN">
+                        <div class="textbox">
+                            <p class="details">Smart intelligence Models</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class=" col-md-4">
+                    <div class="text-down">
+                        <img src="./img/wc1.jpg" alt="PN">
+                        <div class="textbox">
+                            <p class="details">24/7 Customer Service</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- ---------------------------------------------------------TESTTOMINIOLS----------------------- -->
+
+    <section class="test">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-10 col-xl-8 text-center " style="margin-top: 3%;">
+                <div class="tst">
+                    <h1 class="mb-4">T<span>ESTIMONIAL</span>S</h1>
+                </div>
+                <p class="mb-4 pb-2 mb-md-5 pb-md-0">
+                    I just wanted to share a quick note and let you know that you guys do a really good job.
+                    I just wanted to share a quick note and let you know that you guys do a really good job.
+                    I just wanted to share a quick note and let you know that you guys do a really good job.
+                </p>
+            </div>
+        </div>
+
+        <div class="row text-center d-flex align-items-stretch testc">
+            <div class="col-md-4 mb-5 mb-md-0 d-flex align-items-stretch">
+                <div class="card testimonial-card change-radius">
+                    <div class="card-up" style="background-color: #9d789b;"></div>
+                    <div class="avatar mx-auto ">
+                        <img src="./img/test2.jpg" class="rounded-circle img-fluid" />
+                    </div>
+                    <div class="card-body">
+                        <h4 class="mb-4">Maria Smantha</h4>
+                        <hr />
+                        <p class="dark-grey-text mt-4">
+                            <i class="fas fa-quote-left pe-2"></i>I just wanted to share a quick note and let you know
+                            that you guys do a really good job.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-5 mb-md-0 d-flex align-items-stretch">
+                <div class="card testimonial-card1 change-radius1">
+                    <div class="card-up"></div>
+                    <div class="avatar mx-auto ">
+                        <img src="./img/test2.jpg" class="rounded-circle img-fluid" />
+                    </div>
+                    <div class="card-body">
+                        <h4 class="mb-4">Allu Arjun</h4>
+                        <hr />
+                        <p class="dark-grey-text mt-4">
+                            <i class="fas fa-quote-left pe-2"></i>I’m glad I decided to work with you. You made it so
+                            simple.This could be as simple as pulling a powerful quote from a longer
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-0 d-flex align-items-stretch">
+                <div class="card testimonial-card change-radius">
+                    <div class="card-up" style="background-color: #6d5b98;"></div>
+                    <div class="avatar mx-auto">
+                        <img src="./img/test2.jpg" class="rounded-circle img-fluid" />
+                    </div>
+                    <div class="card-body">
+                        <h4 class="mb-4">Rohit Sharma</h4>
+                        <hr />
+                        <p class="dark-grey-text mt-4">
+                            <i class="fas fa-quote-left pe-2"></i>I just wanted to share a quick note and let you know
+                            that you guys do a really good job.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -------------------------------------------------------------FOOTER--------------------------------- -->
+
+    <footer class="text-center text-lg-start text-dark" style="background-color: #ECEFF1">
+        <section class="d-flex justify-content-between p-4 text-white" style="background-color: #21D192">
+
+            <div class="me-5">
+                <span>Get connected with us on social networks:</span>
+            </div>
+
+            <div>
+                <a href="" class="text-white me-4">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fab fa-google"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="" class="text-white me-4">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+
+        </section>
+
+
+        <section class="footer">
+            <div class="container text-center text-md-start mt-5">
+
+                <div class="row mt-3">
+
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">Sample</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p>Analay has 100 ambitious and dedicated employees all- inclusive digital
+                            expericence with a foucs
+                            on long term vision</p>
+                    </div>
+
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">Products</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p><a href="#!" class="text-dark">Wifi</a></p>
+                        <p><a href="#!" class="text-dark">Router</a></p>
+                        <p><a href="#!" class="text-dark">Computer</a></p>
+                        <p><a href="#!" class="text-dark">Laptop</a></p>
+                    </div>
+
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold">Useful links</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p><a href="#!" class="text-dark">Your Account</a></p>
+                        <p><a href="#!" class="text-dark">Become an Affiliate</a></p>
+                        <p><a href="#!" class="text-dark">Shipping Rates</a></p>
+                        <p><a href="#!" class="text-dark">Help</a></p>
+                    </div>
+
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold">Contact</h6>
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
+                        <p><i class="fas fa-envelope mr-3"></i> info@example.com</p>
+                        <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                        <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2020 Copyright:
+
+        </div>
+
+    </footer>
+
+</body>
+<script>
+
+    let mybutton = document.getElementById("myBtn");
+
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+        } else {
+            mybutton.style.display = "none";
+        }
+    }
+
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+</html>
